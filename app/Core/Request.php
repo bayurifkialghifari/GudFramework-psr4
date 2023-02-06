@@ -13,7 +13,7 @@
 		*/
 		public function post($index)
 		{
-			return XssFilter::xss_clean(SqliFilter::sqli_clean($_POST[$index]));
+			return (new XssFilter)->xss_clean((new SqliFilter)->sqli_clean($_POST[$index]));
 		}
 
 		/** 
@@ -30,7 +30,7 @@
 				$get_final[$getget[0]] = $getget[1];
 			}
 
-			return XssFilter::xss_clean(SqliFilter::sqli_clean($get_final[$index]));
+			return (new XssFilter)->xss_clean((new SqliFilter)->sqli_clean($get_final[$index]));
 		}
 
 		/** 

@@ -8,46 +8,46 @@
 	{
 		protected function post($index)
 		{
-			return Request::post($index);
+			return (new Request)->post($index);
 		} 
 
 		protected function get($index)
 		{
-			return Request::get($index);
+			return (new Request)->get($index);
 		} 
 
 		protected function get_all()
 		{
-			return Request::get_all();
+			return (new Request)->get_all();
 		} 
 
 		protected function post_all()
 		{
-			return Request::post_all();
+			return (new Request)->post_all();
 		} 
 
 		protected function all()
 		{
-			return Request::all();
+			return (new Request)->all();
 		}
 
 		protected function sess($sess)
 		{
-			return Request::sess($sess);
+			return (new Request)->sess($sess);
 		}
 
 		protected function set_session($sess)
 		{
-			return Request::set_session($sess);
+			return (new Request)->set_session($sess);
 		}
 
 		protected function unset_session($sess)
 		{
-			return Request::unset_session($sess);
+			return (new Request)->unset_session($sess);
 		}
 
 		protected function destroy_session()
 		{
-			return Request::destroy_session();
+			return (new Request)->destroy_session();
 		}
 	}
